@@ -5,6 +5,8 @@
 	-webkit-box-sizing: border-box
 	-moz-box-sizing: border-box
 	box-sizing: border-box
+	margin: 0
+	padding: 0
 	&:before, &:after
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
@@ -19,30 +21,40 @@
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: $brown
+	text-decoration: none
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: $brown
+	text-decoration: none
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: $brown
+	text-decoration: none
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: $brown
+	text-decoration: none
 
 html, body
 	height: 100%
 
 body
-	font-size: 16px
+	font-size: 13px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
+	margin: 0
+	color: $brown
+	text-decoration: none
+
+ul
+	margin: 0
 
 .img-responsive
 	display: block
@@ -53,7 +65,213 @@ body
 	text-align: center
 
 ::selection
-	background-color: $accent
+	background-color: $orange
 	color: #fff
+
+a
+	color: $brown
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: $brown
+
+
+.page-wrapper
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+
+.wrapper 
+	position: relative
+	min-height: 100%
+	overflow: hidden
+	width: 100%
+	flex: 1
+	background-color: #fff
+	background-image: url(../img/header-background.jpg)
+	background-position: center top
+	background-repeat: no-repeat
+	// background-size: 100%
+
+.header
+	&-top
+		display: flex
+		justify-content: space-between
+		padding: 15px 0
+		border-bottom: 1px solid rgba(118, 98, 89, .3)
+		flex-wrap: wrap
+	&-center
+		padding: 20px 0
+		border-bottom: 1px solid rgba(118, 98, 89, .3)
+
+.navigation
+	&-list
+		display: flex
+		list-style: none
+	&-item
+		margin-right: 35px
+		&:last-child
+			margin-right: 0
+	&-link
+		border-bottom: 1px solid $brown-light
+		transition: all .3s linear
+		&:hover
+			border-bottom: 1px dotted $brown-light
+	&-control
+		display: flex
+		list-style: none
+		&-pic
+			margin-right: 8px
+		&-item
+			margin-right: 35px
+			// border-bottom: 1px solid $brown
+			&:last-child
+				margin-right: 0
+		&-link
+			border-bottom: 1px dotted $brown-light
+			transition: all .3s linear
+			&:hover
+				border-bottom: 1px solid $brown-light
+
+.header
+	&-logo
+		display: flex
+		align-items: center
+	&-phone
+		text-align: right
+		&-number
+			font-family: Georgia
+			font-style: italic
+			font-size: 28px
+			display: block
+		&-recall
+			font-family: 'Calibri'
+			border-bottom: 1px dotted $brown-light
+			transition: all .3s linear
+			&:hover
+				border-bottom: 1px solid $brown-light
+	&-search
+		position: relative
+	&-center
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-bottom
+		padding: 25px 0
+		display: flex
+		justify-content: space-between
+	&-menu
+		display: flex
+		align-items: start
+		list-style: none
+		&-item
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+		&-link
+			font-family: 'Calibri'
+			font-weight: bold
+			font-size: 15px
+
+.logo
+	&-pic
+		margin-right: 15px
+	&-text
+		&-main
+			display: block
+			color: $orange
+			font-weight: bold
+			font-family: 'Calibri-Bold'
+			font-size: 40px
+			line-height: 30px
+		&-desc
+			font-family: 'Philosopher'
+			font-size: 12px
+			display: block
+
+.search
+	&-icon
+		color: $brown
+		position: absolute
+		z-index: 5
+		font-size: 20px
+		top: 7px
+		left: 8px
+	&-input
+		padding: 10px 0 10px 30px
+		border-radius: 25px
+		position: relative
+		min-width: 300px
+		border: none
+		font-family: 'Calibri'
+		color: rgba(118, 98, 89, 0.5)
+		border-top: 1px solid #b5b5b7
+		outline: none
+		transition: all .3s linear
+		&:focus
+			box-shadow: 0px 0px 1px 1px $orange
+			border-top: 1px solid transparent
+
+.cart
+	display: flex
+	align-items: center
+	&-pic
+		position: relative
+		margin-right: 12px
+	&-count
+		position: absolute
+		top: -9px
+		right: -6px
+		&-digit
+			color: #fff
+			z-index: 10
+			position: absolute
+			top: 3px
+			right: 7px
+			font-family: 'Calibri'
+			font-size: 11px
+			font-weight: bold
+	&-price
+		&-value
+			font-family: 'Calibri'
+			font-weight: bold
+			font-size: 15px
+
+.main
+	&-content
+		height: 200px
+		background-color: #fff
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 25px
+			height: 50px
+			background: radial-gradient(closest-side, #000, #000 50%, transparent 50%)
+			background-size: 50px 50px
+			background-position: 0 25px
+			background-repeat: repeat-x
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			height: 50px
+			background: radial-gradient(closest-side, transparent, transparent 50%, #000 50%)
+			background-size: 50px 50px
+			background-position: 25px -25px
+			background-repeat: repeat-x
+			bottom: -25px
+			
+
+.footer
+	background-color: #fff
+	background-image: url(../img/footer-background.png)
+	// background-position: center bottom
+	background-repeat: no-repeat
+	background-size: 100%
+
 
 @import "media" // Всегда в конце
