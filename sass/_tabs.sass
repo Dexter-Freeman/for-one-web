@@ -1,0 +1,48 @@
+.tabs
+	position: relative
+	width: 390px
+	&>input
+		display: none
+		&:checked + label
+			background: #fff
+			border: 1px dashed $orange	
+			border-left: 1px solid $orange
+		&:checked + label  span
+			border-bottom: 1px dotted #d6d0cd
+			transition: all .3s linear
+			
+	&>label
+		display: inline-block
+		padding: 15px 30px
+		cursor: pointer
+		background-color: #fdfcfa
+		border: 1px solid #f0e4ca
+		font-family: 'Calibri'
+		font-size: 1rem
+		margin: 0
+		width: 50%
+		transition: all .3s linear
+		margin-bottom: 40px
+		font-weight: bold
+		& span
+			box-sizing: border-box
+			border-bottom: 1px dotted transparent
+	&-title
+		margin: 0
+
+#left
+	float: left
+	border-radius: 3px 0 0 3px
+	
+#right
+	float: right
+	border-radius: 0 3px 3px 0
+
+#txt_1, #txt_2
+	display: none
+
+#tab_1:checked ~ #txt_1
+	display: block
+
+#tab_2:checked ~ #txt_2
+	display: block

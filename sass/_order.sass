@@ -1,0 +1,156 @@
+
+.order input[type="text"], input[type="tel"], input[type="email"], select 
+	border-radius: 3px
+	height: 35px
+	border: 1px solid #c4b7b1
+	width: 100%
+	padding: 8px 10px
+	outline: none
+	font-family: 'Calibri'
+	font-size: 1rem
+	&:focus
+		border: 1px solid $orange
+	&:invalid
+		border: 1px solid #e64545
+
+.order
+	font-family: 'Calibri'
+	&__label
+		font-family: 'Calibri'
+		font-size: 0.875rem
+		margin-left: 8px
+	&__phone 
+		& label
+			position: relative
+	&__country
+	&-contacts
+		padding-bottom: 30px
+		&__inputs 
+			display: flex
+			justify-content: space-between
+			padding-top: 10px
+	&-address
+		padding-bottom: 30px
+		&__country 
+			display: flex
+			justify-content: space-between
+	&-delivery
+		&__label
+			display: block
+			border: 1px dashed #f0e4ca
+			border-bottom: none
+			padding: 15px
+			cursor: pointer
+			margin: 0
+			width: 390px
+			&:last-child
+				border-bottom: 1px dashed #f0e4ca
+			&> .order__label
+				font-weight: bold
+			& .test .order__label
+				font-weight: bold
+		&-method
+			margin-top: 10px
+		&__info
+			font-family: 'Calibri'
+			font-size: 13px
+			color: #c4b7b1
+			display: inline-block
+			margin-left: 35px
+			margin-right: 15px
+	&_radio
+		display: none
+		&:checked + .order_radio-checked
+			transition: .3s
+			background-image: radial-gradient(ellipse farthest-corner at center, #ff6900 35%, #FFFFFF 35%)
+		&:checked + .order-delivery__label .order_radio-checked
+			transition: .3s
+			background-image: radial-gradient(ellipse farthest-corner at center, #ff6900 35%, #FFFFFF 35%)
+		&:checked + .order-delivery__label
+			background: #fdfcfa
+			border: 1px solid #f0e4ca			
+		&-checked
+			display: inline-block
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: #fff
+			margin-right: 10px
+			position: relative
+			top: 2px
+			border: 1px solid #c6b9b3
+	&-pickup
+		margin-top: 30px
+		&__select
+			margin-top: 20px
+			& label
+				width: 245px
+		&__map
+			margin-top: 20px
+			position: relative
+			border: 1px solid #f0e4ca
+			box-shadow: 0px 60px 33px -65px rgba(240,228,202,1)
+			&-desc
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				z-index: 50
+				background: #fff
+				padding: 20px 20px 10px 20px
+				background: linear-gradient(transparent 0%, #fff 50%, #fff 100%)
+				box-shadow: 0px 60px 33px -65px rgba(240,228,202,1)
+				& p
+					margin-bottom: 5px
+					font-family: 'Calibri'
+					font-size: 1rem
+	&-comment
+		&__textarea
+			width: 390px
+			height: 180px
+			resize: none
+			margin-top: 25px
+
+.submit
+	border: 1px solid #ff9758
+	padding: 15px 40px 15px 25px
+	color: #ff9758
+	background: #fff
+	border-radius: 3px
+	font-family: 'Calibri'
+	font-size: 1rem
+	position: relative
+	&::after
+		content: '>'
+		position: absolute
+		right: 20px
+		top: 13px
+		color: #ff9758
+		font-size: 1.2rem
+		font-weight: bold
+	&-btn
+		text-align: right
+		margin-top: 25px
+
+#map
+	width: 390px
+	height: 290px
+
+.pickup
+	&-station
+		// width: 245px
+		& select
+			
+
+.order-address__country .left
+	width: 50%
+
+.order__country label
+	width: 100%
+
+select
+	appearance: none
+	padding: 5px 10px
+	background-image: url('../img/arrow.jpg')
+	background-repeat: no-repeat
+	background-position: 95% 50%
