@@ -2,13 +2,7 @@
   "name": "d-f_project_for_one-web",
   "version": "1.0.0",
   "description": "Dexter Freeman's Projects",
+  "homepage": "https://dexter-freeman.github.io/for-one-web",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Dexter Freeman <vse.pisma.tut@gmail.com> (https://github.com/Dexter-Freeman)",
-  "homepage": "https://github.com/Dexter-Freeman",
-  "devDependencies": {
-    
-  }
+  "author": "Dexter Freeman <vse.pisma.tut@gmail.com> (https://github.com/Dexter-Freeman)"
 }
